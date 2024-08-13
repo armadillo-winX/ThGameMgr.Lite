@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.22000.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+	<Authors>珠音茉白/東方管制塔開発部</Authors>
+	<Product>東方管制塔 Lite</Product>
+	<Copyright>Copyright © 2024- $(Authors)</Copyright>
+	<AssemblyVersion></AssemblyVersion>
+	<FileVersion></FileVersion>
+	<Version>$(VersionPrefix)$(VersionSuffix)</Version>
+	<VersionPrefix>0.1.0</VersionPrefix>
+	<VersionSuffix>beta</VersionSuffix>
+	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Settings.png" />
+    <None Remove="Images\Start.png" />
+    <None Remove="Images\StartCustom.png" />
+    <None Remove="Images\StartThprac.png" />
+    <None Remove="Images\StartVpatch.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\Start.png" />
+    <Resource Include="Images\StartCustom.png" />
+    <Resource Include="Images\StartThprac.png" />
+    <Resource Include="Images\StartVpatch.png" />
+  </ItemGroup>
+
+</Project>

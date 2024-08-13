@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# CS8600: Null リテラルまたは Null の可能性がある値を Null 非許容型に変換しています。
+dotnet_diagnostic.CS8600.severity = silent
+
+# CS8602: null 参照の可能性があるものの逆参照です。
+dotnet_diagnostic.CS8602.severity = silent

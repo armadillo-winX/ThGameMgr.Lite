@@ -1,0 +1,19 @@
+﻿<Window x:Class="ThGameMgr.Lite.SelectThpracDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThGameMgr.Lite"
+        mc:Ignorable="d"
+        Title="thprac 選択" Height="243" Width="284" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid>
+        <ListBox x:Name="ThpracFilesListBox"
+            Margin="10,10,10,39" />
+        <Button x:Name="OKButton"
+                Width="90" Height="24"
+                Content="_OK"
+                IsDefault="True"
+                HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="OKButtonClick"/>
+
+    </Grid>
+</Window>

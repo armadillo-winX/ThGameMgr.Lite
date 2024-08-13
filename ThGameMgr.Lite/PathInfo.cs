@@ -1,0 +1,17 @@
+﻿namespace ThGameMgr.Lite
+{
+    internal class PathInfo
+    {
+        public static string AppPath => typeof(App).Assembly.Location;
+
+        public static string? AppLocation => Path.GetDirectoryName(AppPath);
+
+        public static string? SettingsDirectory => $"{AppLocation}\\Settings";
+
+        public static string? GamePathSettingsFile => $"{SettingsDirectory}\\GamePathConfig.xml";
+
+        public static string? MainWindowSettingsFile => $"{SettingsDirectory}\\MainWindowConfig.xml";
+
+        public static string? GameSpecificConfigFile => $"{SettingsDirectory}\\GameSpecificConfig.xml";
+    }
+}
