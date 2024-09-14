@@ -5,19 +5,19 @@ namespace ThGameMgr.Lite.Game
 {
     internal class GamePlayLogRecorder
     {
-#pragma warning disable CS8601 // Null 参照代入の可能性があります。
-        private readonly static string _gamePlayLogFile = PathInfo.GamePlayLogRecordFile;
-#pragma warning restore CS8601 // Null 参照代入の可能性があります。
-
         public static void SaveGamePlayLog(GamePlayLogData gamePlayLogData)
         {
-            if (!File.Exists(_gamePlayLogFile))
+            string gamePlayLogFile = PathInfo.GamePlayLogRecordFile;
+
+            if (!File.Exists(gamePlayLogFile))
             {
                 CreateGamePlayLogFile();
             }
 
             XmlDocument gamePlayLogXml = new();
-            gamePlayLogXml.Load(_gamePlayLogFile);
+#pragma warning disable CS8604 // Null 参照引数の可能性があります。
+            gamePlayLogXml.Load(gamePlayLogFile);
+#pragma warning restore CS8604 // Null 参照引数の可能性があります。
             XmlElement rootNode = gamePlayLogXml.DocumentElement;
 
             XmlElement gamePlayLog = gamePlayLogXml.CreateElement("GamePlayLog");
@@ -45,15 +45,19 @@ namespace ThGameMgr.Lite.Game
             _ = gameRunningTime.AppendChild(gamePlayLogXml.CreateTextNode(gamePlayLogData.GameRunningTime));
             _ = gamePlayLog.AppendChild(gameRunningTime);
 
-            gamePlayLogXml.Save(_gamePlayLogFile);
+            gamePlayLogXml.Save(gamePlayLogFile);
         }
 
         public static ObservableCollection<GamePlayLogData> GetGamePlayLogDatas()
         {
+            string gamePlayLogFile = PathInfo.GamePlayLogRecordFile;
+
             ObservableCollection<GamePlayLogData> gamePlayLogDatas = new();
 
             XmlDocument gameLogDataXml = new();
-            gameLogDataXml.Load(_gamePlayLogFile);
+#pragma warning disable CS8604 // Null 参照引数の可能性があります。
+            gameLogDataXml.Load(gamePlayLogFile);
+#pragma warning restore CS8604 // Null 参照引数の可能性があります。
             XmlNodeList allGameLogs = gameLogDataXml.SelectNodes("GamePlayLogData/GamePlayLog");
             if (allGameLogs.Count != 0)
             {
@@ -77,6 +81,8 @@ namespace ThGameMgr.Lite.Game
 
         public static void CreateGamePlayLogFile()
         {
+            string gamePlayLogFile = PathInfo.GamePlayLogRecordFile;
+
             XmlDocument gamePlayLogXml = new();
             XmlNode docNode = gamePlayLogXml.CreateXmlDeclaration("1.0", "UTF-8", null);
             _ = gamePlayLogXml.AppendChild(docNode);
@@ -84,7 +90,9 @@ namespace ThGameMgr.Lite.Game
             XmlNode rootNode = gamePlayLogXml.CreateElement("GamePlayLogData");
             _ = gamePlayLogXml.AppendChild(rootNode);
 
-            gamePlayLogXml.Save(_gamePlayLogFile);
+#pragma warning disable CS8604 // Null 参照引数の可能性があります。
+            gamePlayLogXml.Save(gamePlayLogFile);
+#pragma warning restore CS8604 // Null 参照引数の可能性があります。
         }
     }
 }
