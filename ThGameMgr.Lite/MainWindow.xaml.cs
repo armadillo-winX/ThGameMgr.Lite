@@ -562,5 +562,15 @@ namespace ThGameMgr.Lite
                 GameSpecificConfig.SetAutoResizerConfig(this.GameId, config);
             }
         }
+
+        private void ViewGamePlayLogMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            GamePlayLogDialog gamePlayLogDialog = new()
+            {
+                Owner = this
+            };
+
+            gamePlayLogDialog.ShowDialog();
+        }
     }
 }

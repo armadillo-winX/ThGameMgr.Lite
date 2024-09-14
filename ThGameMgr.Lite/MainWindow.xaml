@@ -49,6 +49,8 @@
             <MenuItem x:Name="ToolsMenu" Header="ツール(_T)">
                 <MenuItem x:Name="StartWindowResizerMenuItem"
                           Header="ウィンドウリサイザを起動" Click="StartWindowResizerMenuItemClick"/>
+                <MenuItem x:Name="ViewGamePlayLogMenuItem"
+                          Header="ゲーム実行履歴" Click="ViewGamePlayLogMenuItemClick"/>
             </MenuItem>
             <MenuItem x:Name="HelpMenu" Header="ヘルプ(_H)">
                 <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
