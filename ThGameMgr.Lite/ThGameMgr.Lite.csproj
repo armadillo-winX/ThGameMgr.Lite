@@ -17,6 +17,7 @@
 	<VersionSuffix>beta</VersionSuffix>
 	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	<ApplicationIcon>ThGameMgr_Lite.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +26,10 @@
     <None Remove="Images\StartCustom.png" />
     <None Remove="Images\StartThprac.png" />
     <None Remove="Images\StartVpatch.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ThGameMgr_Lite.ico" />
   </ItemGroup>
 
   <ItemGroup>
