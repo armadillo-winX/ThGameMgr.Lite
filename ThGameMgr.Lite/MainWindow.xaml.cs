@@ -279,11 +279,35 @@ namespace ThGameMgr.Lite
             this.GameProcess.Dispose();
             _gameControlTimer?.Stop();
 
+            DateTime gameEndTime = DateTime.Now;
+
+            TimeSpan runningTimeSpan = gameEndTime - this.GameStartTime;
+
+            GamePlayLogData gamePlayLogData = new()
+            {
+                GameId = this.GameId,
+                GameName = this.GameName,
+                GameStartTime = this.GameStartTime.ToString("yyyy/MM/dd HH:mm:ss"),
+                GameEndTime = gameEndTime.ToString("yyyy/MM/dd HH:mm:ss"),
+                GameRunningTime = runningTimeSpan.ToString("mm\\:ss")
+            };
+
             if (_resizerFrameWindow != null && _resizerFrameWindow.IsLoaded)
             {
                 _resizerFrameWindow.Close();
             }
             _resizerFrameWindow = null;
+
+            try
+            {
+                GamePlayLogRecorder.SaveGamePlayLog(gamePlayLogData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, $"ゲーム実行履歴の保存に失敗しました。\n{ex.Message}",
+                                "エラー",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             EnableLimitationMode(false);
         }
