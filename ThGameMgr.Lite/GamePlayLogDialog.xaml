@@ -11,6 +11,9 @@
             <MenuItem x:Name="FileMenu" Header="ファイル(_F)">
                 <MenuItem x:Name="CloseMenuItem" Header="閉じる(_C)" Click="CloseMenuItemClick"/>
             </MenuItem>
+            <MenuItem x:Name="ToolMenu" Header="ツール(_T)">
+                <MenuItem x:Name="GameTotalRunningTimeMenuItem" Header="ゲーム実行時間の合計" Click="GameTotalRunningTimeMenuItemClick"/>
+            </MenuItem>
         </Menu>
         <DataGrid
             x:Name="GameLogDataGrid"
