@@ -49,7 +49,19 @@ namespace ThGameMgr.Lite
         {
             InitializeComponent();
 
-            FixAspectRateCheckBox.IsChecked = true;
+            try
+            {
+                ResizerFrameWindowSettings resizerFrameWindowSettings
+                    = SettingsConfigurator.ConfigureResizerFrameWindowSettings();
+                AutoCloseMenuItem.IsChecked = resizerFrameWindowSettings.AutoClose;
+                FixAspectRateCheckBox.IsChecked = resizerFrameWindowSettings.FixAspectRate;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+
+                FixAspectRateCheckBox.IsChecked = true;
+            }
         }
 
         private void SetFramePosition(IntPtr gameWindow)
@@ -113,6 +125,21 @@ namespace ThGameMgr.Lite
             if (_timer != null && _timer.IsEnabled)
             {
                 _timer.Stop();
+            }
+
+            try
+            {
+                ResizerFrameWindowSettings resizerFrameWindowSettings = new()
+                {
+                    AutoClose = AutoCloseMenuItem.IsChecked,
+                    FixAspectRate = FixAspectRateCheckBox.IsChecked == true
+                };
+
+                SettingsConfigurator.SaveResizerFrameWindowSettings(resizerFrameWindowSettings);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
         }
 
