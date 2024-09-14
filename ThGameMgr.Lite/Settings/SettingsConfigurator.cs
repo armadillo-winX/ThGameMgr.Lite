@@ -191,7 +191,7 @@ namespace ThGameMgr.Lite.Settings
 
             XmlSerializer resizerFrameWindowSettingsSerializer = new(typeof(ResizerFrameWindowSettings));
 #pragma warning disable CS8604 // Null 参照引数の可能性があります。
-            FileStream fileStream = new(resizerFrameWindowSettingsFile, FileMode.Open);
+            FileStream fileStream = new(resizerFrameWindowSettingsFile, FileMode.Create);
 #pragma warning restore CS8604 // Null 参照引数の可能性があります。
             resizerFrameWindowSettingsSerializer.Serialize(fileStream, resizerFrameWindowSettings);
             fileStream.Close();
