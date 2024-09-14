@@ -10,7 +10,7 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="合計でこれだけの時間ゲームを実行しています" VerticalAlignment="Top"/>
         <TextBlock
             x:Name="GameTotalRunningTimeBlock"
-            HorizontalAlignment="Center" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Margin="0,46,0,0" FontSize="24" FontWeight="Bold"/>
+            HorizontalAlignment="Center" TextWrapping="Wrap" Text="00min 00sec" VerticalAlignment="Top" Margin="0,46,0,0" FontSize="24" FontWeight="Bold"/>
         <Button x:Name="OKButton"
                 Width="90" Height="24"
                 IsDefault="True"
