@@ -15,5 +15,7 @@
         public static string? GameSpecificConfigFile => $"{SettingsDirectory}\\GameSpecificConfig.xml";
 
         public static string? ResizerFrameSettingsFile => $"{SettingsDirectory}\\ResizerFrameWindowConfig.xml";
+
+        public static string? GamePlayLogRecordFile => $"{AppLocation}\\GamePlayLog.xml";
     }
 }
