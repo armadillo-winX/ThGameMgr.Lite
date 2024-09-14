@@ -13,5 +13,7 @@
         public static string? MainWindowSettingsFile => $"{SettingsDirectory}\\MainWindowConfig.xml";
 
         public static string? GameSpecificConfigFile => $"{SettingsDirectory}\\GameSpecificConfig.xml";
+
+        public static string? ResizerFrameSettingsFile => $"{SettingsDirectory}\\ResizerFrameWindowConfig.xml";
     }
 }
