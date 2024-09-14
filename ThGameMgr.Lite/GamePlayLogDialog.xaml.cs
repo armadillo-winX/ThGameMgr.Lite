@@ -67,8 +67,13 @@ namespace ThGameMgr.Lite
             int totalMinutes = totalGameRunningTime / 60;
             int totalSeconds = totalGameRunningTime % 60;
 
-            MessageBox.Show(this, $"{totalMinutes:00}min {totalSeconds:00}sec", "ゲーム実行時間の合計",
-                MessageBoxButton.OK, MessageBoxImage.Information);
+            GameTotalRunningTimeDialog gameTotalRunningTimeDialog = new()
+            {
+                Owner = this,
+                GameTotalRunningTime = $"{totalMinutes:00}min {totalSeconds:00}sec"
+            };
+
+            gameTotalRunningTimeDialog.ShowDialog();
         }
     }
 }
