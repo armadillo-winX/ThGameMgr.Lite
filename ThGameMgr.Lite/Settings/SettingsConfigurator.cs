@@ -184,5 +184,48 @@ namespace ThGameMgr.Lite.Settings
 
             return mainWindowSettings;
         }
+
+        public static void SaveResizerFrameWindowSettings(ResizerFrameWindowSettings resizerFrameWindowSettings)
+        {
+            string? resizerFrameWindowSettingsFile = PathInfo.ResizerFrameSettingsFile;
+
+            XmlSerializer resizerFrameWindowSettingsSerializer = new(typeof(ResizerFrameWindowSettings));
+#pragma warning disable CS8604 // Null 参照引数の可能性があります。
+            FileStream fileStream = new(resizerFrameWindowSettingsFile, FileMode.Open);
+#pragma warning restore CS8604 // Null 参照引数の可能性があります。
+            resizerFrameWindowSettingsSerializer.Serialize(fileStream, resizerFrameWindowSettings);
+            fileStream.Close();
+        }
+
+        public static ResizerFrameWindowSettings ConfigureResizerFrameWindowSettings()
+        {
+            string? resizerFrameWindowSettingsFile = PathInfo.ResizerFrameSettingsFile;
+
+            ResizerFrameWindowSettings resizerFrameWindowSettings = new();
+
+            if (!string.IsNullOrEmpty(resizerFrameWindowSettingsFile) &&
+                File.Exists(resizerFrameWindowSettingsFile))
+            {
+                XmlSerializer resizerFrameWindowSettingsSerializer = new(typeof(ResizerFrameWindowSettings));
+                FileStream fileStream = new(resizerFrameWindowSettingsFile, FileMode.Open);
+
+                resizerFrameWindowSettings 
+                    = (ResizerFrameWindowSettings)resizerFrameWindowSettingsSerializer.Deserialize(fileStream);
+                fileStream.Close();
+            }
+            else
+            {
+                resizerFrameWindowSettings.FixAspectRate = true;
+                resizerFrameWindowSettings.AutoClose = false;
+            }
+
+            if (resizerFrameWindowSettings == null)
+            {
+                resizerFrameWindowSettings.FixAspectRate = true;
+                resizerFrameWindowSettings.AutoClose = false;
+            }
+
+            return resizerFrameWindowSettings;
+        }
     }
 }
