@@ -29,10 +29,10 @@ namespace ThGameMgr.Lite
             string gamePlayLogRecordFile = PathInfo.GamePlayLogRecordFile;
             if (File.Exists(gamePlayLogRecordFile))
             {
-                ObservableCollection<GamePlayLogData> gamePlayLogDatas = [];
-                gamePlayLogDatas = GamePlayLogRecorder.GetGamePlayLogDatas();
+                ObservableCollection<GamePlayLogData> gamePlayLogDataCollection = [];
+                gamePlayLogDataCollection = GamePlayLogRecorder.GetGamePlayLogDataCollection();
                 GameLogDataGrid.AutoGenerateColumns = false;
-                GameLogDataGrid.DataContext = gamePlayLogDatas;
+                GameLogDataGrid.DataContext = gamePlayLogDataCollection;
             }
         }
 
@@ -43,12 +43,12 @@ namespace ThGameMgr.Lite
 
         private void GameTotalRunningTimeMenuItemClick(object sender, RoutedEventArgs e)
         {
-            ObservableCollection<GamePlayLogData> gamePlayLogDatas
+            ObservableCollection<GamePlayLogData> gamePlayLogDataCollection
                 = GameLogDataGrid.DataContext as ObservableCollection<GamePlayLogData>;
 
             int totalGameRunningTime = 0;
 
-            foreach (GamePlayLogData gamePlayLogData in gamePlayLogDatas)
+            foreach (GamePlayLogData gamePlayLogData in gamePlayLogDataCollection)
             {
                 try
                 {

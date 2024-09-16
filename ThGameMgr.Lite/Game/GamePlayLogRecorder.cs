@@ -48,11 +48,11 @@ namespace ThGameMgr.Lite.Game
             gamePlayLogXml.Save(gamePlayLogFile);
         }
 
-        public static ObservableCollection<GamePlayLogData> GetGamePlayLogDatas()
+        public static ObservableCollection<GamePlayLogData> GetGamePlayLogDataCollection()
         {
             string gamePlayLogFile = PathInfo.GamePlayLogRecordFile;
 
-            ObservableCollection<GamePlayLogData> gamePlayLogDatas = new();
+            ObservableCollection<GamePlayLogData> gamePlayLogDataCollection = new();
 
             XmlDocument gameLogDataXml = new();
 #pragma warning disable CS8604 // Null 参照引数の可能性があります。
@@ -72,11 +72,11 @@ namespace ThGameMgr.Lite.Game
                         GameRunningTime = gameLog.SelectSingleNode("GameRunningTime").InnerText
                     };
 
-                    gamePlayLogDatas.Add(gamePlayLogData);
+                    gamePlayLogDataCollection.Add(gamePlayLogData);
                 }
             }
 
-            return gamePlayLogDatas;
+            return gamePlayLogDataCollection;
         }
 
         public static void CreateGamePlayLogFile()
