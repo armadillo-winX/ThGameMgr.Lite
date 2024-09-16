@@ -17,5 +17,7 @@
         public static string? ResizerFrameSettingsFile => $"{SettingsDirectory}\\ResizerFrameWindowConfig.xml";
 
         public static string? GamePlayLogRecordFile => $"{AppLocation}\\GamePlayLog.xml";
+
+        public static string? ReadMeFile => $"{AppLocation}\\ReadMe.txt";
     }
 }
