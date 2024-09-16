@@ -40,4 +40,10 @@
     <Resource Include="Images\StartVpatch.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ReadMe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

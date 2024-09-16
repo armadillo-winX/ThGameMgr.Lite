@@ -572,5 +572,21 @@ namespace ThGameMgr.Lite
 
             gamePlayLogDialog.ShowDialog();
         }
+
+        private void OpenReadMeMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (PathInfo.ReadMeFile != null)
+                {
+                    Process.Start("notepad.exe", PathInfo.ReadMeFile);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "エラー",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
