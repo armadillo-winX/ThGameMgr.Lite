@@ -579,7 +579,13 @@ namespace ThGameMgr.Lite
             {
                 if (PathInfo.ReadMeFile != null)
                 {
-                    Process.Start("notepad.exe", PathInfo.ReadMeFile);
+                    ProcessStartInfo processStartInfo = new()
+                    {
+                        FileName = PathInfo.ReadMeFile,
+                        UseShellExecute = true
+                    };
+
+                    Process.Start(processStartInfo);
                 }
             }
             catch (Exception ex)
