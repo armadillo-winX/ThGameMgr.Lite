@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThGameMgr.Lite"
         mc:Ignorable="d"
-        Title="ゲーム実行時間統計" Height="243" Width="301" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+        Title="ゲーム実行時間統計" Height="247" Width="332" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
     <Grid>
         <DataGrid x:Name="EachGameRunningTimeGrid" ItemsSource="{Binding}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="40" IsReadOnly="True"
                                             Binding="{Binding GameId}"/>
-                <DataGridTextColumn Header="作品名" Width="160" IsReadOnly="True"
-                                            Binding="{Binding GameName}" FontSize="14"/>
+                <DataGridTextColumn Header="ゲーム名" Width="160" IsReadOnly="True"
+                                            Binding="{Binding GameName}"/>
                 <DataGridTextColumn Header="総実行時間" Width="80" IsReadOnly="True"
-                                            Binding="{Binding GameRunningTime}" FontSize="14"/>
+                                            Binding="{Binding GameRunningTime}"/>
 
             </DataGrid.Columns>
         </DataGrid>
