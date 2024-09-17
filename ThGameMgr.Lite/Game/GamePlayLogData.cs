@@ -1,6 +1,6 @@
 ﻿namespace ThGameMgr.Lite.Game
 {
-    internal class GamePlayLogData
+    public class GamePlayLogData
     {
         public string? GameId { get; set; }
 
