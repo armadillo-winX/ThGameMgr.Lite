@@ -12,8 +12,8 @@
                 <MenuItem x:Name="CloseMenuItem" Header="閉じる(_C)" Click="CloseMenuItemClick"/>
             </MenuItem>
             <MenuItem x:Name="ToolMenu" Header="ツール(_T)">
-                <MenuItem x:Name="GameTotalRunningTimeMenuItem" Header="ゲーム実行時間の合計" Click="GameTotalRunningTimeMenuItemClick"/>
-                <MenuItem x:Name="GameRunningTimeStatisticsMenuItem" Header="それぞれのゲーム総実行時間" Click="GameRunningTimeStatisticsMenuItemClick"/>
+                <MenuItem x:Name="GameTotalRunningTimeMenuItem" Header="実行時間の合計" Click="GameTotalRunningTimeMenuItemClick"/>
+                <MenuItem x:Name="GameRunningTimeStatisticsMenuItem" Header="それぞれのゲームの総実行時間" Click="GameRunningTimeStatisticsMenuItemClick"/>
             </MenuItem>
         </Menu>
         <DataGrid
