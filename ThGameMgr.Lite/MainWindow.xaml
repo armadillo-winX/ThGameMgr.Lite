@@ -34,7 +34,11 @@
                 </MenuItem>
                 <Separator/>
                 <MenuItem x:Name="ViewGamePlayLogMenuItem"
-                          Header="ゲーム実行履歴" Click="ViewGamePlayLogMenuItemClick"/>
+                          Header="ゲーム実行履歴" Click="ViewGamePlayLogMenuItemClick">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/History.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator/>
                 <MenuItem x:Name="SetGamesPathMenuItem" Header="ゲームのパスを設定する"
                           Click="SetGamePathMenuItemClick">
