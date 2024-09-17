@@ -21,6 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\History.png" />
     <None Remove="Images\Settings.png" />
     <None Remove="Images\Start.png" />
     <None Remove="Images\StartCustom.png" />
@@ -33,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\History.png" />
     <Resource Include="Images\Settings.png" />
     <Resource Include="Images\Start.png" />
     <Resource Include="Images\StartCustom.png" />
