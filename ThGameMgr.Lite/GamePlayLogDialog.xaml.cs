@@ -75,5 +75,22 @@ namespace ThGameMgr.Lite
 
             gameTotalRunningTimeDialog.ShowDialog();
         }
+
+        private void GameRunningTimeStatisticsMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            ObservableCollection<GamePlayLogData> gamePlayLogDataCollection
+                = GameLogDataGrid.DataContext as ObservableCollection<GamePlayLogData>;
+            if (gamePlayLogDataCollection != null &&
+                gamePlayLogDataCollection.Count > 0)
+            {
+                GameRunningTimeStatisticsDialog gameRunningTimeStatisticsDialog = new()
+                {
+                    Owner = this,
+                    GamePlayLogDataCollection = gamePlayLogDataCollection
+                };
+
+                gameRunningTimeStatisticsDialog.ShowDialog();
+            }
+        }
     }
 }
