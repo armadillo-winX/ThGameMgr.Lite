@@ -614,5 +614,27 @@ namespace ThGameMgr.Lite
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void EditVpatchIniMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.GameId))
+            {
+                string gameFilePath = GameFile.GetGameFilePath(this.GameId);
+                string gameDirectoryPath = Path.GetDirectoryName(gameFilePath);
+
+                string vpatchIniFilePath = $"{gameDirectoryPath}\\vpatch.ini";
+
+                if (File.Exists(vpatchIniFilePath))
+                {
+                    EditVpatchIniDialog editVpatchIniDialog = new()
+                    {
+                        Owner = this,
+                        VsyncPatchIniFilePath = vpatchIniFilePath
+                    };
+
+                    editVpatchIniDialog.ShowDialog();
+                }
+            }
+        }
     }
 }
