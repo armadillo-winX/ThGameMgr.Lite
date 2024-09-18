@@ -635,6 +635,11 @@ namespace ThGameMgr.Lite
 
                     editVpatchIniDialog.ShowDialog();
                 }
+                else
+                {
+                    MessageBox.Show(this, "vpatch.ini が見つかりませんでした。", "vpatch.ini を編集",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
         }
     }
