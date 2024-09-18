@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThGameMgr.Lite"
         mc:Ignorable="d"
-        Title="vpatch.ini エディタ" Height="277" Width="340" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False">
+        Title="vpatch.ini エディタ" Height="277" Width="340" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
     <Grid>
         <TextBox x:Name="EditorBox"
                  Margin="0,0,0,24" TextWrapping="NoWrap" Text=""
