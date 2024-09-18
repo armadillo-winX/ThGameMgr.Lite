@@ -60,6 +60,8 @@
             <MenuItem x:Name="HelpMenu" Header="ヘルプ(_H)">
                 <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
                 <MenuItem x:Name="OpenReadMeMenuItem" Header="ReadMe.txtを開く" Click="OpenReadMeMenuItemClick"/>
+                <Separator/>
+                <MenuItem x:Name="SendFeedbackMenuItem" Header="フィードバックの送信(_F)" Click="SendFeedbackMenuItemClick"/>
             </MenuItem>
         </Menu>
         <Button x:Name="SelectGameButton"

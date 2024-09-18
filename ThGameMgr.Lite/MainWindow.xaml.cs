@@ -594,5 +594,25 @@ namespace ThGameMgr.Lite
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void SendFeedbackMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ProcessStartInfo processStartInfo = new()
+                {
+                    FileName
+                    = "https://forms.gle/6aHvWavL5N6Rvnnu9",
+                    UseShellExecute = true
+                };
+
+                Process.Start(processStartInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "エラー",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
