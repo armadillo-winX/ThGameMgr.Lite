@@ -203,6 +203,7 @@ namespace ThGameMgr.Lite
             StartGameWithVpatchMenuItem.IsEnabled = !enabled;
             StartGameWithThpracMenuItem.IsEnabled = !enabled;
             StartCustomProgramMenuItem.IsEnabled = !enabled;
+            EditVpatchIniMenuItem.IsEnabled = !enabled;
 
             SelectGameButton.IsEnabled = !enabled;
             StartGameButton.IsEnabled = !enabled;
