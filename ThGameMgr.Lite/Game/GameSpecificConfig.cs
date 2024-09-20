@@ -6,6 +6,11 @@ namespace ThGameMgr.Lite.Game
     {
         private static Dictionary<string, bool?>? _autoResizerConfigDictionary;
 
+        /// <summary>
+        /// ウィンドウリサイザの自動起動オプションを返す(bool?値)
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <returns></returns>
         public static bool? GetAutoResizerConfig(string gameId)
         {
             if (_autoResizerConfigDictionary == null)
@@ -25,6 +30,11 @@ namespace ThGameMgr.Lite.Game
             }
         }
 
+        /// <summary>
+        /// ウィンドウリサイザの自動起動オプションを設定する
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <param name="config"></param>
         public static void SetAutoResizerConfig(string gameId, bool? config)
         {
             if (_autoResizerConfigDictionary == null)
