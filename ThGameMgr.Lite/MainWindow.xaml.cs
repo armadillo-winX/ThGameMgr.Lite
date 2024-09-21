@@ -115,6 +115,7 @@ namespace ThGameMgr.Lite
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     GamePathSettingsDialog gamePathSettingsDialog = new();
                     gamePathSettingsDialog.ShowDialog();
+                    this.GameId = GameIndex.GetFirstEnableGame();
                 }
 
                 try
@@ -140,6 +141,7 @@ namespace ThGameMgr.Lite
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     GamePathSettingsDialog gamePathSettingsDialog = new();
                     gamePathSettingsDialog.ShowDialog();
+                    this.GameId = GameIndex.GetFirstEnableGame();
                 }
                 catch (Exception ex)
                 {
