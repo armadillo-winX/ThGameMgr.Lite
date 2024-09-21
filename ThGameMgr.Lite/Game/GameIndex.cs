@@ -107,5 +107,18 @@ namespace ThGameMgr.Lite.Game
 
             return enabledGamesList;
         }
+
+        public static string GetFirstEnableGame()
+        {
+            List<string> enabledGamesList = GetEnabledGamesList();
+            if (enabledGamesList.Count > 0)
+            {
+                return enabledGamesList[0];
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }
