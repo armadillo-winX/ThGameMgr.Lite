@@ -115,7 +115,7 @@ namespace ThGameMgr.Lite
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     GamePathSettingsDialog gamePathSettingsDialog = new();
                     gamePathSettingsDialog.ShowDialog();
-                    this.GameId = GameIndex.GetFirstEnableGame();
+                    //this.GameId = GameIndex.GetFirstEnableGame();
                 }
 
                 try
