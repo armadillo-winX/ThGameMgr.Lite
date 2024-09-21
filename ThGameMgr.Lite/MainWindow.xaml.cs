@@ -97,25 +97,14 @@ namespace ThGameMgr.Lite
             //メインウィンドウの設定構成処理はすべての設定が構成された後に行う
             if (Directory.Exists(PathInfo.SettingsDirectory))
             {
-                if (File.Exists(PathInfo.GamePathSettingsFile))
+                try
                 {
-                    try
-                    {
-                        SettingsConfigurator.ConfigureGamePathSettings();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"ゲームパス設定の構成処理に失敗しました。\n{ex.Message}", "エラー",
-                            MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    SettingsConfigurator.ConfigureGamePathSettings();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("ゲームのパスを設定してください。", VersionInfo.AppName,
-                        MessageBoxButton.OK, MessageBoxImage.Information);
-                    GamePathSettingsDialog gamePathSettingsDialog = new();
-                    gamePathSettingsDialog.ShowDialog();
-                    this.GameId = GameIndex.GetFirstEnableGame();
+                    MessageBox.Show($"ゲームパス設定の構成処理に失敗しました。\n{ex.Message}", "エラー",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
                 try
