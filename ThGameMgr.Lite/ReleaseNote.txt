@@ -1,7 +1,7 @@
-“Œ•ûŠÇ§“ƒ Lite ƒŠƒŠ[ƒXƒm[ƒg
+ï»¿æ±æ–¹ç®¡åˆ¶å¡” Lite ãƒªãƒªãƒ¼ã‚¹ãƒŽãƒ¼ãƒˆ
 
 ver0.2.0-beta
-E‰‰ñ‹N“®Žž‚Ì‹““®‚ð•ÏXB
+ãƒ»åˆå›žèµ·å‹•æ™‚ã®æŒ™å‹•ã‚’å¤‰æ›´ã€‚
 
 ver0.1.0-beta
-EÅ‰‚ÌWebŒöŠJƒx[ƒ^”ÅB
+ãƒ»æœ€åˆã®Webå…¬é–‹ãƒ™ãƒ¼ã‚¿ç‰ˆã€‚
