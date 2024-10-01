@@ -63,7 +63,7 @@ namespace ThGameMgr.Lite
                 }
             }
 
-            ObservableCollection<GamePlayLogData> eachGameRunningTimeDatas = [];
+            ObservableCollection<GamePlayLogData> eachGameRunningTimeDataCollection = [];
 
             foreach (string gameId in allGamesList)
             {
@@ -76,11 +76,11 @@ namespace ThGameMgr.Lite
                     GameRunningTime = $"{gameRunningTime / 60:00}:{gameRunningTime % 60:00}"
                 };
 
-                eachGameRunningTimeDatas.Add(gamePlayLogData);
+                eachGameRunningTimeDataCollection.Add(gamePlayLogData);
             }
 
             EachGameRunningTimeGrid.AutoGenerateColumns = false;
-            EachGameRunningTimeGrid.DataContext = eachGameRunningTimeDatas;
+            EachGameRunningTimeGrid.DataContext = eachGameRunningTimeDataCollection;
         }
     }
 }
