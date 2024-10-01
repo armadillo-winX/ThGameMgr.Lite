@@ -46,7 +46,7 @@ namespace ThGameMgr.Lite.Game
         }
 
         /// <summary>
-        /// ゲームインストールフォルダの全 thprac 実行ファイルのファイル名を返す(string[]値)
+        /// ゲームインストールフォルダの全 thprac 実行ファイルのファイル名を返す(List型)
         /// </summary>
         /// <param name="gameId"></param>
         /// <returns></returns>
