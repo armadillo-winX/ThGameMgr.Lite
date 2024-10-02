@@ -25,11 +25,7 @@
             </TabItem>
             <TabItem Header="総実行時間順位">
                 <Grid >
-                    <TextBox x:Name="RunnigTimeRankBox"
-                             IsReadOnly="True" TextWrapping="NoWrap"
-                             TextAlignment="Center"
-                             VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
-                             Text="" FontSize="18"/>
+                    <ListBox x:Name="RunnigTimeRankListBox" FontSize="14"/>
 
                 </Grid>
             </TabItem>

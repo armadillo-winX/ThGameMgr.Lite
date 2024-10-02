@@ -133,10 +133,6 @@ namespace ThGameMgr.Lite
                 //並べ替え(降順になる)
                 gameRunningTimeList.Reverse();
 
-                string rankingMessage = "";
-
-                int i = 1;
-
                 foreach (int gameRunningTime in gameRunningTimeList)
                 {
                     string gameId = gameRunningTimeDictionary.FirstOrDefault(
@@ -145,12 +141,9 @@ namespace ThGameMgr.Lite
                     //同一の実行時間の作品を区別するために逐一消す
                     gameRunningTimeDictionary.Remove(gameId);
 
-                    rankingMessage += 
-                        $"{i} {gameId}: {GameIndex.GetGameName(gameId)}   {gameRunningTime / 60:00}:{gameRunningTime % 60:00}\n";
-                    i++;
+                    RunnigTimeRankListBox.Items.Add(
+                        $"{gameId}: {GameIndex.GetGameName(gameId)}   {gameRunningTime / 60:00}:{gameRunningTime % 60:00}\n");
                 }
-
-                RunnigTimeRankBox.Text = rankingMessage;
             }
         }
     }
