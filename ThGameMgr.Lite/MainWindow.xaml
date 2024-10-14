@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThGameMgr.Lite"
         mc:Ignorable="d"
-        Title="MainWindow" Height="195" Width="449" ResizeMode="CanMinimize" Closing="MainWindowClosing">
+        Title="MainWindow" Height="207" Width="449" ResizeMode="CanMinimize" Closing="MainWindowClosing">
     <Grid>
         <Menu Height="18" VerticalAlignment="Top">
             <MenuItem x:Name="GameMenu" Header="ゲーム(_G)">
@@ -134,6 +134,7 @@
             Text="00min00sec" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <CheckBox x:Name="AutoStartWindowResizerCheckBox" Visibility="Visible"
             Content="ゲーム起動時にウィンドウリサイザを起動する" HorizontalAlignment="Left" Margin="11,118,0,0" VerticalAlignment="Top" Click="AutoStartWindowResizerCheckBoxClick"/>
+        <StatusBar x:Name="MainStatusBar" Height="22" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>
