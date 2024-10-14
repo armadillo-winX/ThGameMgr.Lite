@@ -95,6 +95,9 @@ namespace ThGameMgr.Lite
 
             AppStatusItem.Content = "準備完了";
 
+            if (App.IsAdmin())
+                this.Title += " (管理者)";
+
             //各種設定構成処理
             //メインウィンドウの設定構成処理はすべての設定が構成された後に行う
             if (Directory.Exists(PathInfo.SettingsDirectory))
