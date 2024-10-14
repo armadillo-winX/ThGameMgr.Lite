@@ -93,6 +93,8 @@ namespace ThGameMgr.Lite
 
             EnableLimitationMode(false);
 
+            AppStatusItem.Content = "準備完了";
+
             //各種設定構成処理
             //メインウィンドウの設定構成処理はすべての設定が構成された後に行う
             if (Directory.Exists(PathInfo.SettingsDirectory))
@@ -241,6 +243,8 @@ namespace ThGameMgr.Lite
 
             EnableLimitationMode(true);
 
+            AppStatusItem.Content = "ゲーム実行中...";
+
             _gameEndWaitingModeWorker = new BackgroundWorker();
             _gameEndWaitingModeWorker.DoWork += new DoWorkEventHandler(WorkerDoWork);
             _gameEndWaitingModeWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(WorkerRunningComplete);
@@ -328,6 +332,7 @@ namespace ThGameMgr.Lite
             }
 
             EnableLimitationMode(false);
+            AppStatusItem.Content = "準備完了";
         }
 
         private void GameSelectionMenuItemClick(object sender, RoutedEventArgs e)

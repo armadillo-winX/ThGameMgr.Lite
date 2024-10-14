@@ -134,7 +134,9 @@
             Text="00min00sec" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <CheckBox x:Name="AutoStartWindowResizerCheckBox" Visibility="Visible"
             Content="ゲーム起動時にウィンドウリサイザを起動する" HorizontalAlignment="Left" Margin="11,118,0,0" VerticalAlignment="Top" Click="AutoStartWindowResizerCheckBoxClick"/>
-        <StatusBar x:Name="MainStatusBar" Height="22" VerticalAlignment="Bottom"/>
+        <StatusBar x:Name="MainStatusBar" Height="22" VerticalAlignment="Bottom">
+            <StatusBarItem x:Name="AppStatusItem"></StatusBarItem>
+        </StatusBar>
 
     </Grid>
 </Window>
