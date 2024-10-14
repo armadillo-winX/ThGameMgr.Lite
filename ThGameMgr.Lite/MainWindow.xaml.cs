@@ -243,7 +243,8 @@ namespace ThGameMgr.Lite
 
             EnableLimitationMode(true);
 
-            AppStatusItem.Content = "ゲーム実行中...";
+            AppStatusItem.Content
+                = !string.IsNullOrEmpty(this.GameId) ? $"{GameIndex.GetGameName(this.GameId)}を実行中..." : "Unknownを実行中...";
 
             _gameEndWaitingModeWorker = new BackgroundWorker();
             _gameEndWaitingModeWorker.DoWork += new DoWorkEventHandler(WorkerDoWork);
