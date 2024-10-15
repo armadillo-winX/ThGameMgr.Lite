@@ -681,7 +681,7 @@ namespace ThGameMgr.Lite
 
         private void ReimuMenuItemClick(object sender, RoutedEventArgs e)
         {
-            if (ReimuMenuItem.IsChecked == true)
+            if (ReimuMenuItem.IsChecked)
             {
                 ReimuImageView.Visibility = Visibility.Visible;
             }
