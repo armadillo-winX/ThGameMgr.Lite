@@ -668,5 +668,17 @@ namespace ThGameMgr.Lite
                 }
             }
         }
+
+        private void ReimuMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            if (ReimuMenuItem.IsChecked == true)
+            {
+                ReimuImageView.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ReimuImageView.Visibility= Visibility.Hidden;
+            }
+        }
     }
 }

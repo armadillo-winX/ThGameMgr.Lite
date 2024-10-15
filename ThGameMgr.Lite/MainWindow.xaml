@@ -16,6 +16,8 @@
                 <Separator/>
                 <MenuItem x:Name="AlwaysOnTopMenuItem"
                     Header="最前面に固定" IsCheckable="True" Click="AlwaysOnTopMenuItemClick"/>
+                <MenuItem x:Name="ReimuMenuItem"
+                    Header="霊夢(_R)" IsCheckable="True" Click="ReimuMenuItemClick"/>
                 <Separator/>
                 <MenuItem x:Name="ExitMenuItem" Header="終了(_X)" Click="ExitMenuItemClick"/>
             </MenuItem>
