@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="207" Width="449" ResizeMode="CanMinimize" Closing="MainWindowClosing">
     <Grid>
+        <Image x:Name="ReimuImageView"
+            HorizontalAlignment="Right" Height="61" Margin="0,0,0,22" VerticalAlignment="Bottom" Width="100" Source="/Images/reimu2_100x.png"/>
+
         <Menu Height="18" VerticalAlignment="Top">
             <MenuItem x:Name="AppMenu" Header="東方管制塔(_M)">
                 <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
@@ -19,25 +22,25 @@
             <MenuItem x:Name="GameMenu" Header="ゲーム(_G)">
                 <MenuItem x:Name="StartGameMenuItem" Header="ゲームを起動(_S)" Click="StartGameMenuItemClick">
                     <MenuItem.Icon>
-                        <Image Source="/Images/Start.png"></Image>
+                        <Image Source="/Images/Start.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="StartGameWithVpatchMenuItem" Header="VsyncPatch を適用してゲームを起動(_V)" 
                           Click="StartGameWithVpatchMenuItemClick">
                     <MenuItem.Icon>
-                        <Image Source="/Images/StartVpatch.png"></Image>
+                        <Image Source="/Images/StartVpatch.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="StartGameWithThpracMenuItem" Header="thprac を適用してゲームを起動(_T)"
                           Click="StartGameWithThpracMenuItemClick">
                     <MenuItem.Icon>
-                        <Image Source="/Images/StartThprac.png"></Image>
+                        <Image Source="/Images/StartThprac.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
                 <MenuItem x:Name="StartCustomProgramMenuItem" Header="custom.exe を起動する(_C)" Click="StartCustomProgramMenuItemClick">
                     <MenuItem.Icon>
-                        <Image Source="/Images/StartCustom.png"></Image>
+                        <Image Source="/Images/StartCustom.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
@@ -51,7 +54,7 @@
                 <MenuItem x:Name="SetGamesPathMenuItem" Header="ゲームのパスを設定する"
                           Click="SetGamePathMenuItemClick">
                     <MenuItem.Icon>
-                        <Image Source="/Images/Settings.png"></Image>
+                        <Image Source="/Images/Settings.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
@@ -85,48 +88,40 @@
                 Width="120" Height="24"
                 HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"
                 Click="StartGameMenuItemClick">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16"
-                    Source="/Images/Start.png" HorizontalAlignment="Left"></Image>
-                    <TextBlock 
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Height="16"
+                    Source="/Images/Start.png" HorizontalAlignment="Left"/>
+                <TextBlock 
                     Text="ゲーム起動" 
                     VerticalAlignment="Center"/>
-                </StackPanel>
-            </Button.Content>
+            </StackPanel>
         </Button>
         <Button x:Name="StartGameWithVpatchButton"
                 Width="24" Height="24"
                 HorizontalAlignment="Left" Margin="135,81,0,0" VerticalAlignment="Top"
                 ToolTip="VsyncPatch を適用してゲームを起動する"
                 Click="StartGameWithVpatchMenuItemClick">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Source="/Images/StartVpatch.png"></Image>
-                </StackPanel>
-            </Button.Content>
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Height="16" Source="/Images/StartVpatch.png"/>
+            </StackPanel>
         </Button>
         <Button x:Name="StartGameWithThpracButton"
                 HorizontalAlignment="Left" Margin="164,81,0,0" VerticalAlignment="Top" 
                 Width="24" Height="24"
                 ToolTip="thprac を適用してゲームを起動する"
                 Click="StartGameWithThpracMenuItemClick">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Source="/Images/StartThprac.png"></Image>
-                </StackPanel>
-            </Button.Content>
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Height="16" Source="/Images/StartThprac.png"/>
+            </StackPanel>
         </Button>
         <Button x:Name="StartCustomProgramButton"
                 Width="24" Height="24"
                 HorizontalAlignment="Left" Margin="193,81,0,0" VerticalAlignment="Top"
                 ToolTip="custom.exe を起動する"
                 Click="StartCustomProgramMenuItemClick">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Source="/Images/StartCustom.png"></Image>
-                </StackPanel>
-            </Button.Content>
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Height="16" Source="/Images/StartCustom.png"/>
+            </StackPanel>
         </Button>
         <Label Content="ゲーム実行時間:" HorizontalAlignment="Left" Margin="224,80,0,0" VerticalAlignment="Top"/>
         <TextBlock
@@ -136,7 +131,7 @@
         <CheckBox x:Name="AutoStartWindowResizerCheckBox" Visibility="Visible"
             Content="ゲーム起動時にウィンドウリサイザを起動する" HorizontalAlignment="Left" Margin="11,118,0,0" VerticalAlignment="Top" Click="AutoStartWindowResizerCheckBoxClick"/>
         <StatusBar x:Name="MainStatusBar" Height="22" VerticalAlignment="Bottom">
-            <StatusBarItem x:Name="AppStatusItem"></StatusBarItem>
+            <StatusBarItem x:Name="AppStatusItem"/>
         </StatusBar>
 
     </Grid>
