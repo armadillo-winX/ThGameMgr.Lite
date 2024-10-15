@@ -9,5 +9,7 @@
         public string? SelectedGameId { get; set; }
 
         public bool MainWindowAlwaysOnTop { get; set; }
+
+        public bool ShowReimu { get; set; }
     }
 }
