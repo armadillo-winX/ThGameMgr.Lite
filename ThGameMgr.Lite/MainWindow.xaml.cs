@@ -211,6 +211,15 @@ namespace ThGameMgr.Lite
                 this.GameId = mainWindowSettings.SelectedGameId;
                 this.Topmost = mainWindowSettings.MainWindowAlwaysOnTop;
                 AlwaysOnTopMenuItem.IsChecked = mainWindowSettings.MainWindowAlwaysOnTop;
+                ReimuMenuItem.IsChecked = mainWindowSettings.ShowReimu;
+                if (mainWindowSettings.ShowReimu)
+                {
+                    ReimuImageView.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ReimuImageView.Visibility = Visibility.Hidden;
+                }
             }
             catch (Exception ex)
             {
