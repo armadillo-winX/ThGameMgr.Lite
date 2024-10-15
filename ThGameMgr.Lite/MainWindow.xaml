@@ -10,6 +10,7 @@
         <Menu Height="18" VerticalAlignment="Top">
             <MenuItem x:Name="AppMenu" Header="東方管制塔(_M)">
                 <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
+                <Separator/>
                 <MenuItem x:Name="AlwaysOnTopMenuItem"
                     Header="最前面に固定" IsCheckable="True" Click="AlwaysOnTopMenuItemClick"/>
                 <Separator/>
