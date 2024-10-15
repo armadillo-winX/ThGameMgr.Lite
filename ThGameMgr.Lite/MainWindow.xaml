@@ -8,6 +8,11 @@
         Title="MainWindow" Height="207" Width="449" ResizeMode="CanMinimize" Closing="MainWindowClosing">
     <Grid>
         <Menu Height="18" VerticalAlignment="Top">
+            <MenuItem x:Name="AppMenu" Header="東方管制塔(_M)">
+                <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
+                <Separator/>
+                <MenuItem x:Name="ExitMenuItem" Header="終了(_X)" Click="ExitMenuItemClick"/>
+            </MenuItem>
             <MenuItem x:Name="GameMenu" Header="ゲーム(_G)">
                 <MenuItem x:Name="StartGameMenuItem" Header="ゲームを起動(_S)" Click="StartGameMenuItemClick">
                     <MenuItem.Icon>
@@ -46,8 +51,6 @@
                         <Image Source="/Images/Settings.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <Separator/>
-                <MenuItem x:Name="ExitMenuItem" Header="終了(_X)" Click="ExitMenuItemClick"/>
             </MenuItem>
             <MenuItem x:Name="OptionMenu" Header="オプション(_O)">
                 <MenuItem x:Name="AlwaysOnTopMenuItem"
@@ -60,7 +63,6 @@
                           Header="vpatch.ini を編集" Click="EditVpatchIniMenuItemClick"/>
             </MenuItem>
             <MenuItem x:Name="HelpMenu" Header="ヘルプ(_H)">
-                <MenuItem x:Name="AboutMenuItem" Header="バージョン情報(_A)" Click="AboutMenuItemClick"/>
                 <MenuItem x:Name="OpenReadMeMenuItem" Header="ReadMe.txtを開く" Click="OpenReadMeMenuItemClick"/>
                 <Separator/>
                 <MenuItem x:Name="SendFeedbackMenuItem" Header="フィードバックの送信(_F)" Click="SendFeedbackMenuItemClick"/>
