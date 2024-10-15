@@ -172,6 +172,7 @@ namespace ThGameMgr.Lite.Settings
                 mainWindowSettings.MainWindowLocationY = 100;
                 mainWindowSettings.SelectedGameId = string.Empty;
                 mainWindowSettings.MainWindowAlwaysOnTop = false;
+                mainWindowSettings.ShowReimu = false;
             }
 
             if (mainWindowSettings == null)
@@ -180,6 +181,7 @@ namespace ThGameMgr.Lite.Settings
                 mainWindowSettings.MainWindowLocationY = 100;
                 mainWindowSettings.SelectedGameId = string.Empty;
                 mainWindowSettings.MainWindowAlwaysOnTop = false;
+                mainWindowSettings.ShowReimu = false;
             }
 
             return mainWindowSettings;
