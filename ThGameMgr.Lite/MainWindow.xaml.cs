@@ -426,7 +426,8 @@ namespace ThGameMgr.Lite
                     MainWindowLocationX = this.Left,
                     MainWindowLocationY = this.Top,
                     SelectedGameId = this.GameId,
-                    MainWindowAlwaysOnTop = AlwaysOnTopMenuItem.IsChecked
+                    MainWindowAlwaysOnTop = AlwaysOnTopMenuItem.IsChecked,
+                    ShowReimu = ReimuMenuItem.IsChecked
                 };
 
                 SettingsConfigurator.SaveMainWindowSettings(applicationSettings);
