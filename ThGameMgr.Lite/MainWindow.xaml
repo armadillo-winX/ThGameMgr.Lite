@@ -125,6 +125,7 @@
         </Button>
         <TextBlock
             x:Name="GameRunningTimeBlock"
+            ToolTip="ゲーム実行時間"
             HorizontalAlignment="Left" Margin="245,81,0,0" TextWrapping="Wrap"
             Text="00min00sec" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <CheckBox x:Name="AutoStartWindowResizerCheckBox" Visibility="Visible"
