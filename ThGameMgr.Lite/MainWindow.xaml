@@ -123,11 +123,10 @@
                 <Image Width="16" Height="16" Source="/Images/StartCustom.png"/>
             </StackPanel>
         </Button>
-        <Label Content="ゲーム実行時間:" HorizontalAlignment="Left" Margin="224,80,0,0" VerticalAlignment="Top"/>
         <TextBlock
             x:Name="GameRunningTimeBlock"
-            HorizontalAlignment="Left" Margin="316,82,0,0" TextWrapping="Wrap"
-            Text="00min00sec" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            HorizontalAlignment="Left" Margin="245,81,0,0" TextWrapping="Wrap"
+            Text="00min00sec" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <CheckBox x:Name="AutoStartWindowResizerCheckBox" Visibility="Visible"
             Content="ゲーム起動時にウィンドウリサイザを起動する" HorizontalAlignment="Left" Margin="11,118,0,0" VerticalAlignment="Top" Click="AutoStartWindowResizerCheckBoxClick"/>
         <StatusBar x:Name="MainStatusBar" Height="22" VerticalAlignment="Bottom">
