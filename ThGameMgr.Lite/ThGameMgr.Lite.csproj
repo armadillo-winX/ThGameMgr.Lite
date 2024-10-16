@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <None Remove="Images\History.png" />
-    <None Remove="Images\reimu2_100x.png" />
     <None Remove="Images\reimu3_100x.png" />
     <None Remove="Images\Settings.png" />
     <None Remove="Images\Start.png" />
@@ -37,7 +36,6 @@
 
   <ItemGroup>
     <Resource Include="Images\History.png" />
-    <Resource Include="Images\reimu2_100x.png" />
     <Resource Include="Images\reimu3_100x.png" />
     <Resource Include="Images\Settings.png" />
     <Resource Include="Images\Start.png" />
