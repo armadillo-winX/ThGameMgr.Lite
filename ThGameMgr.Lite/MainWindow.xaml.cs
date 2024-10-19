@@ -90,6 +90,7 @@ namespace ThGameMgr.Lite
             this.GameId = string.Empty;
             this.IsGameEndWaitModeEnabled = false;
             this.GameProcess = new();
+            ReimuImageView.Visibility = Visibility.Hidden;
 
             EnableLimitationMode(false);
 
