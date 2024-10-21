@@ -512,7 +512,8 @@ namespace ThGameMgr.Lite
                     {
                         SelectThpracDialog selectThpracDialog = new()
                         {
-                            ThpracFiles = thpracFiles
+                            ThpracFiles = thpracFiles,
+                            Owner = this
                         };
 
                         if (selectThpracDialog.ShowDialog() == true)

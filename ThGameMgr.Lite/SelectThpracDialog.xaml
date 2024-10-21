@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThGameMgr.Lite"
         mc:Ignorable="d"
-        Title="thprac 選択" Height="243" Width="284" ResizeMode="NoResize" ShowInTaskbar="False">
+        Title="thprac 選択" Height="243" Width="284" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
     <Grid>
         <ListBox x:Name="ThpracFilesListBox"
             Margin="10,10,10,39" />
