@@ -13,8 +13,8 @@
 	<AssemblyVersion></AssemblyVersion>
 	<FileVersion></FileVersion>
 	<Version>$(VersionPrefix)$(VersionSuffix)</Version>
-	<VersionPrefix>0.3.0</VersionPrefix>
-	<VersionSuffix>beta</VersionSuffix>
+	<VersionPrefix>0.4.0</VersionPrefix>
+	<VersionSuffix></VersionSuffix>
 	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	<ApplicationIcon>ThGameMgr_Lite.ico</ApplicationIcon>
